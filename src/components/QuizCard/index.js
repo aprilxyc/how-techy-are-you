@@ -1,8 +1,26 @@
 import React, { Component } from 'react';
+import { QuizCardStyle, QuizLabel, QuizCheckbox} from '../../utils/Cards';
 
 class QuizCard extends Component {
+    constructor(props) {
+        super()
+        this.state = {
+            showAnimation: false
+        }
+    }
+
+    startAnimation() {
+        this.setState({ showAnimation: true });
+    }
+
+
     render() {
-        return <p>Here is a question</p>
+        return (
+                <div>
+                    <QuizLabel>You choose an application based on its UI</QuizLabel>
+                    <input type="checkbox" onChange={this.startAnimation}></input>
+                </div>
+                )
     }
 }
 

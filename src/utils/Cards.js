@@ -10,7 +10,27 @@ export const IntroCard = styled.div`
     background-color: #4137CB;
 `;
 
-export const QuizCard = styled.div`
+export const QuizCardStyle = styled.div`
+    height          : 50px;
+    width           : 100%;
+    text-align      : left;
+    background-color: #17141d;
+    transition      : color 200ms ease-in;;
+    border-radius   : 5px;
+    position        : absolute;
+    color           : #FFFFFF;
+`;
+
+export const QuizLabel = styled.label`
+    padding         : 12px 30px;
+    width           : 100%;
+    display         : block;
+    text-align      : left;
+    color           : #FFFFFF;
+    background-color: #4137CB;
+    cursor          : pointer;
     position        : relative;
-    background-color: #FFE430;
+    z-index         : 2;
+    transition      : color 200ms ease-in;
+    overflow        : hidden;
 `;

@@ -27,9 +27,6 @@ class Introduction extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log("TOGGLED");
-    console.log("this.props.animation: ", this.props.animation);
-    console.log("prevProps.animation: ", prevProps.animation);
     if (prevProps.animation === true) {
       setTimeout(() => {
         prevProps.animation = false;
@@ -38,8 +35,6 @@ class Introduction extends Component {
   }
 
   render() {
-    const whatever = this.props.animation;
-    console.log(whatever);
     return (
       <div>
         <Transition in={this.props.animation} timeout={500}>
