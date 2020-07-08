@@ -1,8 +1,12 @@
 import React, { Component } from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 
 // style-components
 import { IntroCard } from "../../utils/Cards";
+
+// animation
+import { Transition } from "react-transition-group";
+import { Animation } from "../Animation/index";
 
 const Button = styled.button`
   position     : absolute;
@@ -22,25 +26,25 @@ class Introduction extends Component {
     super();
   }
 
+  componentDidUpdate(prevProps) {
+    console.log("TOGGLED");
+    console.log("this.props.animation: ", this.props.animation);
+    console.log("prevProps.animation: ", prevProps.animation);
+    if (prevProps.animation === true) {
+      setTimeout(() => {
+        prevProps.animation = false;
+      }, 3000);
+    }
+  }
+
   render() {
-    const { animationToggle } = this.props;
+    const whatever = this.props.animation;
+    console.log(whatever);
     return (
       <div>
-        {animationToggle ? (
-          <IntroCard>
-            <p>Welcome to the quiz</p>
-            <ul>
-              <li>There are 20 questions</li>
-              <li>Answer as honestly as you can.</li>
-            </ul>
-            <Button onClick={this.props.handleClick}>
-              <div>
-                Start
-                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </div>
-            </Button>
-          </IntroCard>
-        ) : (
+        <Transition in={this.props.animation} timeout={500}>
+          {(state) => (
+            <Animation state={state}>
               <IntroCard>
                 <p>Welcome to the quiz</p>
                 <ul>
@@ -54,7 +58,9 @@ class Introduction extends Component {
                   </div>
                 </Button>
               </IntroCard>
-        )}
+            </Animation>
+          )}
+        </Transition>
       </div>
     );
   }

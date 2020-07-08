@@ -5,9 +5,6 @@ import "./App.css";
 import Introduction from "./components/Introduction";
 import QuizCard from './components/QuizCard'; 
 
-// animations
-import { slideOutRight } from 'react-animations';
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +16,8 @@ class App extends Component {
 
   clickStartButton = () => {
     this.setState({ showAnimation: true });
-    this.setState({ showQuestion: true });
+    setTimeout(() => {this.setState({ showQuestion: true })},
+    2000)
   }
   
   renderQuestion = () => {
@@ -41,7 +39,6 @@ class App extends Component {
     let question = this.state.showQuestion;
 
     if(question) {
-      console.log("helo")
       return this.renderQuestion();
     } else {
       return this.renderIntro();
