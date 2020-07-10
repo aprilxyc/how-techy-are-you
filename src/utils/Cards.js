@@ -31,16 +31,16 @@ export const QuizLabel = styled.div`
         height    : 50px;
         border    : 3px solid #2ecc71;
         background: transparent;
-        color     : #2ecc71;
+        color     : #FFFFFF;
       }
       `
     }
 `;
 
 export const PageHeader = styled.h1`
-color         : #FFFFFF;
-font-size     : 2.5em;
-letter-spacing: -.025em;
-line-height   : 1.25;
-margin-left   : -.0625em;
+  color         : #FFFFFF;
+  font-size     : 2.5em;
+  letter-spacing: -.025em;
+  line-height   : 1.25;
+  margin-left   : -.0625em;
 `;

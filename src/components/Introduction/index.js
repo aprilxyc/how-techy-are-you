@@ -1,25 +1,14 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 
-// style-components
-import { IntroCard } from "../../utils/Cards";
-
-// animation
+// css transitions
 import { Transition } from "react-transition-group";
 import { Animation } from "../Animation/index";
 
-const Button = styled.button`
-  position     : absolute;
-  top          : 60%;
-  left         : 40%;
-  background   : #4137cb;
-  font-size    : 1em;
-  margin       : 1em;
-  border       : 2px solid;
-  border-radius: 3px;
-  color        : #ffffff;
-  padding      : 5px;
-`;
+// style-components
+import styled from "styled-components";
+import { IntroCard } from "../../utils/Cards";
+import { StartButton } from "../../utils/Button";
+
 
 class Introduction extends Component {
   constructor(props) {
@@ -46,12 +35,12 @@ class Introduction extends Component {
                   <li>There are 20 questions</li>
                   <li>Answer as honestly as you can.</li>
                 </ul>
-                <Button onClick={this.props.handleClick}>
+                <StartButton onClick={this.props.handleClick}>
                   <div>
                     Start
                     <i class="fa fa-arrow-right" aria-hidden="true"></i>
                   </div>
-                </Button>
+                </StartButton>
               </IntroCard>
             </Animation>
           )}

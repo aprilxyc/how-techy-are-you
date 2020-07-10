@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { QuizCardStyle, QuizLabel, QuizSection} from '../../utils/Cards';
-import { Grid, Row, Col } from '../../utils/FlexComponents';
+import { QuizLabel } from '../../utils/Cards';
 
 class QuizCard extends Component {
     constructor(props) {
