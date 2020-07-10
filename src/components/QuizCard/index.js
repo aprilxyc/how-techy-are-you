@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { QuizCardStyle, QuizLabel, QuizCheckbox} from '../../utils/Cards';
+import { QuizCardStyle, QuizLabel, QuizSection} from '../../utils/Cards';
+import { Grid, Row, Col } from '../../utils/FlexComponents';
 
 class QuizCard extends Component {
     constructor(props) {
@@ -10,22 +11,18 @@ class QuizCard extends Component {
     }
 
     handleCheck() {
-        console.log("starting value: ", this.state.checked)
         this.setState({ checked: !this.state.checked }, () => {
             console.log("this is the value: ", this.state.checked)
         });
     }
 
-
     render() {
         return (
-                <div>
-                    <QuizLabel checked={this.state.checked}>
-                        <div>You choose an application based on its UI.</div>
-                        <input type="checkbox" onChange={() => this.handleCheck()}></input>
-                    </QuizLabel>
-                </div>
-                )
+            <QuizLabel checked={this.state.checked}>
+                {this.props.text}
+                <input type="checkbox" onChange={() => this.handleCheck()}></input>
+            </QuizLabel>
+            )
     }
 }
 

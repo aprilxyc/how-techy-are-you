@@ -7,41 +7,40 @@ export const IntroCard = styled.div`
     right           : 300px;
     height          : 300px;
     width           : 500px;
-    background-color: #4137CB;
+    background-color: #F76C6C;
 `;
 
-export const QuizCardStyle = styled.div`
-    height          : 50px;
-    width           : 100%;
-    text-align      : left;
-    background-color: #17141d;
-    transition      : color 200ms ease-in;;
-    border-radius   : 5px;
-    position        : absolute;
-    color           : #FFFFFF;
-`;
-
-export const QuizLabel = styled.label`
-    padding         : 12px 30px;
-    width           : 100%;
-    display         : block;
-    text-align      : left;
-    color           : #FFFFFF;
-    background-color: #808080;
-    cursor          : pointer;
-    position        : relative;
-    z-index         : 2;
-    transition      : color 200ms ease-in;
-    overflow        : hidden;
-    background-color: #808080;
+export const QuizLabel = styled.div`
+  width           : 500px;
+  height          : 50px;
+  text-align      : left;
+  border          : 3px solid #FFE400;
+  color           : #FFFFFF;
+  z-index         : 2;
+  transition      : color 200ms ease-in;
+  overflow        : hidden;
+  background-color: #808080;
+  line-height     : 3rem;
+  text-align      : center;
+  font-family     : 'Fira Sans', sans-serif;
+  margin-bottom   : 20px;
 
       ${({ checked }) => checked && css`
        {
-        width     : 200px;
+        width     : 500px;
+        height    : 50px;
         border    : 3px solid #2ecc71;
         background: transparent;
         color     : #2ecc71;
       }
       `
     }
+`;
+
+export const PageHeader = styled.h1`
+color         : #FFFFFF;
+font-size     : 2.5em;
+letter-spacing: -.025em;
+line-height   : 1.25;
+margin-left   : -.0625em;
 `;

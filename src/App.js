@@ -3,7 +3,7 @@ import "./App.css";
 
 // components
 import Introduction from "./components/Introduction";
-import QuizCard from './components/QuizCard'; 
+import QuizPage from './components/QuizPage'; 
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class App extends Component {
   }
   
   renderQuestion = () => {
-    return <QuizCard />
+    return <QuizPage />
   }
 
   renderIntro = () => {
