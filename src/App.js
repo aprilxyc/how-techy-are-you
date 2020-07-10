@@ -28,13 +28,6 @@ class App extends Component {
     return <Introduction handleClick={() => this.clickStartButton()} animation={this.state.showAnimation}/>
   }
 
-  animateStart = () => {
-   
-    
-
-
-  }
-
   render() {
     let question = this.state.showQuestion;
 

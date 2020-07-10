@@ -20,7 +20,7 @@ class QuizCard extends Component {
     render() {
         return (
                 <div>
-                    <QuizLabel buttonClicked={this.state.checked}>
+                    <QuizLabel checked={this.state.checked}>
                         <div>You choose an application based on its UI.</div>
                         <input type="checkbox" onChange={() => this.handleCheck()}></input>
                     </QuizLabel>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css }from 'styled-components';
 
 export const IntroCard = styled.div`
     position        : absolute;
@@ -33,5 +33,15 @@ export const QuizLabel = styled.label`
     z-index         : 2;
     transition      : color 200ms ease-in;
     overflow        : hidden;
-    background-color: ${props => props.buttonClicked ? "#808080" : "#FFFFFF"};
+    background-color: #808080;
+
+      ${({ checked }) => checked && css`
+       {
+        width     : 200px;
+        border    : 3px solid #2ecc71;
+        background: transparent;
+        color     : #2ecc71;
+      }
+      `
+    }
 `;
