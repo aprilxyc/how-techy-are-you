@@ -5,20 +5,25 @@ class QuizCard extends Component {
     constructor(props) {
         super()
         this.state = {
-            showAnimation: false
+            checked: false
         }
     }
 
-    startAnimation() {
-        this.setState({ showAnimation: true });
+    handleCheck() {
+        console.log("starting value: ", this.state.checked)
+        this.setState({ checked: !this.state.checked }, () => {
+            console.log("this is the value: ", this.state.checked)
+        });
     }
 
 
     render() {
         return (
                 <div>
-                    <QuizLabel>You choose an application based on its UI</QuizLabel>
-                    <input type="checkbox" onChange={this.startAnimation}></input>
+                    <QuizLabel buttonClicked={this.state.checked}>
+                        <div>You choose an application based on its UI.</div>
+                        <input type="checkbox" onChange={() => this.handleCheck()}></input>
+                    </QuizLabel>
                 </div>
                 )
     }

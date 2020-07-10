@@ -27,10 +27,11 @@ export const QuizLabel = styled.label`
     display         : block;
     text-align      : left;
     color           : #FFFFFF;
-    background-color: #4137CB;
+    background-color: #808080;
     cursor          : pointer;
     position        : relative;
     z-index         : 2;
     transition      : color 200ms ease-in;
     overflow        : hidden;
+    background-color: ${props => props.buttonClicked ? "#808080" : "#FFFFFF"};
 `;
