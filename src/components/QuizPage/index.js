@@ -5,6 +5,7 @@ import QuizCard from '../QuizCard/index';
 import { PageHeader } from '../../utils/Cards';
 import { Grid, Row, Col } from '../../utils/FlexComponents';
 import { SubmitButton } from '../../utils/Button';
+import Checkbox from '../Checkbox/index';
 
 const quizQuestions = [
     "You choose your applications based on the UI",
@@ -41,7 +42,9 @@ class QuizPage extends Component {
                     <SubmitButton>
                        Submit
                    </SubmitButton>
+                   <Checkbox />
                 </Row>
+
             </Grid>
         )
     }

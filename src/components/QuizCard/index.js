@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+
+// styled components
 import { QuizLabel } from '../../utils/Cards';
+import Checkbox from '../Checkbox/index';
 
 class QuizCard extends Component {
     constructor(props) {
@@ -17,10 +20,15 @@ class QuizCard extends Component {
 
     render() {
         return (
-            <QuizLabel checked={this.state.checked}>
-                {this.props.text}
-                <input type="checkbox" onChange={() => this.handleCheck()}></input>
-            </QuizLabel>
+            <QuizLabel checked={this.state.checked}>  
+                <label>
+                    {this.props.text}
+                    <Checkbox 
+                        checked  = {this.state.checked}
+                        onChange = {() => this.handleCheck()}
+                    />
+                </label>
+            </QuizLabel> 
             )
     }
 }
