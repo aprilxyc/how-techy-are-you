@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+// components
+import Modal from '../Modal/index';
+
 export const Button = styled.button`
   top          : 60%;
   left         : 40%;
@@ -13,19 +16,31 @@ export const Button = styled.button`
 
 
 class SubmitButton extends Component {
-
-  handleClick = () => {
-    // render result page when clicked
-    console.log("this was clicked!")
+  constructor(props) {
+    super()
+    this.state = {
+      isModalOpen: false
+    };
   }
+
+    toggleModalState = e => {
+      this.setState({
+        isModalOpen: !this.state.isModalOpen
+      });
+    }
 
     render() {
         return (
-
-          <Button onClick={() => this.handleClick()}>
-            Submit
-          </Button>
-
+          <div>
+            <Button onClick={() => this.toggleModalState()}> Submit </Button>
+              {this.state.isModalOpen && (
+                  <Modal>
+                    <div>
+                      I am the content in modal!
+                    </div>
+                  </Modal>
+              )}
+          </div>
         )
         
     }
