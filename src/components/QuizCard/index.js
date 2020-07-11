@@ -13,8 +13,14 @@ class QuizCard extends Component {
     }
 
     handleCheck() {
+        console.log("start state: ", this.state.checked);
         this.setState({ checked: !this.state.checked }, () => {
-            console.log("this is the value: ", this.state.checked)
+            // replace with ternary operator
+            if(this.state.checked) {
+                this.props.incrementCount();
+            } else {
+                this.props.decrementCount();
+            }
         });
     }
 

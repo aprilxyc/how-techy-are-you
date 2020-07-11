@@ -23,7 +23,7 @@ const StyledCheckbox = styled.div`
 width         : 20px;
 height        : 20px;
 border-radius : 20px;
-box-shadow    : 0 0 0 3px pink;
+box-shadow    : 0 0 0 3px #666668;
 transition    : all 200ms;
 vertical-align: middle;
 

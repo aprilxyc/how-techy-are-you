@@ -4,27 +4,36 @@ import QuizCard from '../QuizCard/index';
 // styled components
 import { PageHeader } from '../../utils/Cards';
 import { Grid, Row, Col } from '../../utils/FlexComponents';
-import { SubmitButton } from '../../utils/Button';
-import Checkbox from '../Checkbox/index';
+import SubmitButton from '../SubmitButton/index';
 
-const quizQuestions = [
-    "You choose your applications based on the UI",
-    "You need at least two monitors to do some work",
-    "How likely are you to buy the latest new gadgets?",
-    "You own a mechanical keyboard",
-    "You are your friends and family's tech support",
-    "You Google all of your problems",
-    "You go on reddit a lot",
-    "r/cscareerquestions"
-]
+// constants
+import { quizQuestions } from '../../utils/consts/consts';
+
+
+// stores the total points
+let pointCounter = 0;
 
 class QuizPage extends Component {
+
+    incrementCounter = () => {
+        pointCounter += 1
+        console.log("incremented: ", pointCounter);
+    }
+
+    decrementCounter = () => {
+        pointCounter -= 1
+        console.log("decremented: ", pointCounter);
+    }
+
     render() {
         const questionList = quizQuestions.map((question) => {
             return (
                 <Row>
                     <Col size={12}>
-                        <QuizCard text={question}/>
+                        <QuizCard
+                            text           = {question}
+                            incrementCount = {this.incrementCounter}
+                            decrementCount = {this.decrementCounter}/>
                     </Col>
                 </Row>
             )
@@ -42,9 +51,7 @@ class QuizPage extends Component {
                     <SubmitButton>
                        Submit
                    </SubmitButton>
-                   <Checkbox />
                 </Row>
-
             </Grid>
         )
     }
