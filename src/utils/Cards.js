@@ -1,19 +1,28 @@
 import styled, { css }from 'styled-components';
 
 export const IntroCard = styled.div`
-    position        : absolute;
-    top             : 300px;
-    left            : 300px;
-    right           : 300px;
-    height          : 300px;
-    width           : 500px;
-    background-color: #F76C6C;
+display         : flex;
+margin-top      : 300px;
+height          : 500px;
+width           : 600px;
+top             : 300px;
+left            : 300px;
+right           : 300px;
+background-color: #FFFFFF;
+align-items     : center;
+justify-content : center;
+box-shadow      : 0px 3px 15px rgba(0,0,0,0.2);
+
+transition: 0.5s;
+transform : translateX(
+  ${({ state }) => (state === "entering" || state === "entered" ? 1300 : 0)}px
+);
 `;
 
 
 export const QuizLabel = styled.div`
     font-family     : 'Quicksand', sans-serif;
-    box-shadow      : 3px 3px 5px 1px;
+    box-shadow      : 0px 3px 15px rgba(0,0,0,0.2);
     border-radius   : 3px;
     width           : 500px;
     height          : 50px;
