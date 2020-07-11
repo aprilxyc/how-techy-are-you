@@ -4,8 +4,7 @@ import React, { Component } from "react";
 import { Transition } from "react-transition-group";
 import { Animation } from "../Animation/index";
 
-// style-components
-import styled from "styled-components";
+// styled-components
 import { IntroCard } from "../../utils/Cards";
 import { StartButton } from "../../utils/Button";
 

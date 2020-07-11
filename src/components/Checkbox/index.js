@@ -1,31 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// icon
+import circleCheck from '../../icons/check-circle-solid.svg';
 
 const CheckboxContainer = styled.div`
-    display: inline-block;
-    float  : right;
+    display      : inline-block;
+    margin-top   : 20px;
+    margin-right : 20px;
+    margin-bottom: 20px;
+    float        : right;
+
 `;
 
-const TickIcon = styled.div`
-    .checkmark {
-        vertical-align: middle;
-        font-size     : 20px;
-        height        : 30px;
-    }
+const TickIcon = styled.img`
+  width : 20px;
+  height: 20px;
+  margin: 0px 30px 25px 0px;
 `;
 
 const StyledCheckbox = styled.div`
-    width        : 20px;
-    height       : 20px;
-    border-radius: 20px;
-    box-shadow   : 0 0 0 3px pink;
-    transition   : all 200ms;
+width         : 20px;
+height        : 20px;
+border-radius : 20px;
+box-shadow    : 0 0 0 3px pink;
+transition    : all 200ms;
+vertical-align: middle;
 
     ${TickIcon} {
-        vertical-align: middle;
-        line-height   : 40px;
-        visibility    : ${props => (props.checked ? 'visible' : 'hidden')};
+        visibility: ${props => (props.checked ? 'visible' : 'hidden')};
     }
 `;
 
@@ -48,9 +51,7 @@ const Checkbox = ({ className, checked, ...props }) => (
     <CheckboxContainer>
             <HiddenCheckbox checked={checked} {...props}/>
                 <StyledCheckbox checked={checked} {...props}>
-                    <TickIcon>
-                        <i className="checkmark" class="fas fa-check-circle"></i>
-                    </TickIcon>
+                    <TickIcon src={circleCheck} />
                 </StyledCheckbox>
     </CheckboxContainer>
 )
