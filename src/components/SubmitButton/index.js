@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 // components
-import Modal from '../Modal/index';
+import ResultPage from '../ResultPage/index';
 
 export const Button = styled.button`
   top          : 60%;
@@ -18,28 +18,12 @@ export const Button = styled.button`
 class SubmitButton extends Component {
   constructor(props) {
     super()
-    this.state = {
-      isModalOpen: false
-    };
   }
-
-    toggleModalState = (event) => {
-      this.setState({
-        isModalOpen: !this.state.isModalOpen
-      });
-    }
-
+  
     render() {
         return (
           <div>
-            <Button onClick={() => this.toggleModalState()}> Submit </Button>
-              {this.state.isModalOpen && (
-                  <Modal>
-                    <div>
-                      I am the content in modal!
-                    </div>
-                  </Modal>
-              )}
+            <Button onClick={this.props.onClick}>Submit</Button>
           </div>
         )
         
