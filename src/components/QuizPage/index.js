@@ -13,23 +13,22 @@ import { quizQuestions } from "../../utils/consts/consts";
 import ResultPage from "../ResultPage/index";
 import Footer from '../Footer/index';
 
-// stores the total points
-let pointCounter = 0;
 
 class QuizPage extends Component {
   constructor(props) {
     super();
     this.state = {
       isResultsPage: false,
+      score        : 0,
     };
   }
 
   incrementCounter = () => {
-    pointCounter += 1;
+    this.setState({score: this.state.score + 1})
   };
 
   decrementCounter = () => {
-    pointCounter -= 1;
+    this.setState({score: this.state.score + 1})
   };
 
   handleClick = () => {
@@ -53,7 +52,7 @@ class QuizPage extends Component {
       );
     });
 
-    const resultPage = <ResultPage scoreCount={pointCounter} />;
+    const resultPage = <ResultPage score={this.state.score}/>;
 
     return (
       <div>
