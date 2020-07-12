@@ -24,6 +24,17 @@ class ResultPage extends Component {
             </Col>
             <Col size={3} />
         </Row>
+        <Row>
+            <Col size={1.5}/>
+            <Col size={2}>
+                <StyledParagraph>
+                    Description based on the school.
+                    Cool, you're pretty cool - insert stuff about them here
+                    You should probably join MAC
+                </StyledParagraph>
+            </Col>
+            <Col size={1.5} />
+        </Row>
       </Grid>
     );
   }

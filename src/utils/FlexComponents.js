@@ -5,8 +5,8 @@ export const Grid = styled.div`
 
 export const Row = styled.div`
     display        : flex;
+    height         : ${(props) => props.size}
     justify-content: center;
-    border-style   : 3px solid #000000;
 `;
 
 const media = {

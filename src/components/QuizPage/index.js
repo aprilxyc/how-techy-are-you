@@ -3,14 +3,15 @@ import QuizCard from "../QuizCard";
 
 // styled components
 import { PageHeader } from "../../utils/Cards";
-import { Grid, Row, Col } from "../../utils/FlexComponents";
+import { Row, Col } from "../../utils/FlexComponents";
 import SubmitButton from "../SubmitButton/index";
 
 // constants
 import { quizQuestions } from "../../utils/consts/consts";
 
-// compoennts
+// components
 import ResultPage from "../ResultPage/index";
+import Footer from '../Footer/index';
 
 // stores the total points
 let pointCounter = 0;
@@ -69,11 +70,14 @@ class QuizPage extends Component {
             </Row>
             {questionList}
             <Row>
-              <Col size={1.5} />
-              <Col size={2}>
+              <Col size={3.5} />
+              <Col size={1}>
                 <SubmitButton onClick={() => this.handleClick()} />
               </Col>
-              <Col size={1.5} />
+              <Col size={3.5} />
+            </Row>
+            <Row>
+              <Footer />
             </Row>
           </div>
         )}
