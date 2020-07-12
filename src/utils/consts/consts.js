@@ -17,6 +17,16 @@ export const quizQuestions = [
     "Is it plugged in?",
     "You know what WWDC is 🤓",
     "Your field of study is within STEM",
-    "You're open to using most social media channels",
-    "You care about privacy when online"
+    "You're open to using most social media profiles",
+    "You care about privacy when online",
+    "Internet speed matters",
+    "You wait for shows to come out on Torrent",
+    "You use Google Chrome or Firefox",
+    "You think coding is useful in most jobs",
+    "You check your phone all the time",
+    "You own a pair of noise-cancelling headphones",
+    "You work / want to work in tech",
+    "Smart Glasses look dumb but you'd try it anyway",
+    "You watch tech Youtubers",
+    "Quarantine got you learning new things online"
 ]
