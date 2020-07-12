@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+// styled components
 import styled from 'styled-components';
 
 export const Button = styled.button`
@@ -16,7 +18,6 @@ class SubmitButton extends Component {
   constructor(props) {
     super()
   }
-  
     render() {
         return (
           <div>
