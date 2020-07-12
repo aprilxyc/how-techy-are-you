@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-// components
-import ResultPage from '../ResultPage/index';
-
 export const Button = styled.button`
   top          : 60%;
   left         : 40%;
