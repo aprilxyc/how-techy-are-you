@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 // styled components
-import { PageHeader } from "../../utils/Cards";
+import { PageHeader, StyledParagraph } from "../../utils/Cards";
 import { Grid, Row, Col } from "../../utils/FlexComponents";
 
 class ResultPage extends Component {
@@ -14,9 +14,15 @@ class ResultPage extends Component {
             <PageHeader>
               You got a score of: 
             </PageHeader>
-                {this.props.scoreCount}
           </Col>
           <Col size={2} />
+        </Row>
+        <Row>
+            <Col size={3}/>
+            <Col size={1}>
+                <PageHeader>{this.props.scoreCount}</PageHeader>
+            </Col>
+            <Col size={3} />
         </Row>
       </Grid>
     );

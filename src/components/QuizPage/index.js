@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import QuizCard from "../QuizCard/index";
+import QuizCard from "../QuizCard";
 
 // styled components
 import { PageHeader } from "../../utils/Cards";

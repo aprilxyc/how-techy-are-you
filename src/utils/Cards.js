@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const PageHeader = styled.h1`
   font-family   : "Quicksand", sans-serif;
@@ -12,4 +12,14 @@ export const PageHeader = styled.h1`
     font-size     : 2.5em;
     letter-spacing: -0.025em;
   }
+`;
+
+export const StyledParagraph = styled.h3`
+  position      : relative;
+  top           : -40px;
+  left          : 80px;
+  font-family   : "Quicksand", sans-serif;
+  color         : #000000;
+  font-size     : 20px;
+  letter-spacing: -0.05em;
 `;
