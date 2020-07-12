@@ -2,7 +2,7 @@ export const quizQuestions = [
     "You choose your applications based on aesthetics",
     "You have at least two monitors set up",
     "You're always open to trying new gadgets",
-    "You're always open to trying new programs/applications",
+    "You're always trying new programs/applications",
     "You own a mechanical keyboard",
     "Your friends come to you for tech issues",
     "Your family comes to you for tech issues",

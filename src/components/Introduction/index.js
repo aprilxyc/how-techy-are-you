@@ -13,12 +13,18 @@ const StyledWelcome = styled.h1`
   position      : relative;
   top           : -30px;
   left          : 90px;
+  font-size     : 2em;
   font-family   : "Quicksand", sans-serif;
   color         : #000000;
-  font-size     : 2em;
   letter-spacing: -0.025em;
   line-height   : 1.25;
   margin-left   : -0.05em;
+
+  @media only screen and (max-width: 600px) {
+    position : relative;
+    font-size: 3em;
+    left     : 80px;
+  }
 `;
 
 const StyledParagraph = styled.h3`
@@ -29,6 +35,10 @@ const StyledParagraph = styled.h3`
   color         : #000000;
   font-size     : 20px;
   letter-spacing: -0.05em;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.5em;
+  }
 `;
 
 const IntroCard = styled.div`
@@ -94,6 +104,10 @@ const StartButton = styled.button`
   &:hover:after {
     -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
     transform        : translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 1em;
   }
 
   @media only screen and (max-width: 600px) {

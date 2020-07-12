@@ -18,7 +18,7 @@ const QuizLabel = styled.div`
   overflow        : hidden;
   background-color: #ffffff;
   line-height     : 3rem;
-  text-align      : center;
+  text-align      : left;
   margin-bottom   : 20px;
 
   &:hover {
@@ -54,7 +54,6 @@ class QuizCard extends Component {
     }
 
     handleCheck() {
-        console.log("start state: ", this.state.checked);
         this.setState({ checked: !this.state.checked }, () => {
             // replace with ternary operator
             if(this.state.checked) {
@@ -68,6 +67,7 @@ class QuizCard extends Component {
     render() {
         return (
             <QuizLabel checked={this.state.checked}>  
+                <span style={{marginRight: '1em'}}></span>
                 <label>
                     {this.props.text}
                     <Checkbox 
