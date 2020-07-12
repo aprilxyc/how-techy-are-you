@@ -51,8 +51,8 @@ class Introduction extends Component {
     return (
       <Grid>
         <Row>
-         <Col />
-          <Col size={2}>
+         <Col size={1.5} collapse="xs"/>
+          <Col size={2} collapse="xs">
             <Transition in={this.props.animation} timeout={500}>
               {(state) => (
                 <IntroCard state={state}>
@@ -72,7 +72,7 @@ class Introduction extends Component {
               )}
             </Transition>
           </Col>
-          <Col />
+          <Col size={1.5} collapse="xs"/>
         </Row>
       </Grid>
     );

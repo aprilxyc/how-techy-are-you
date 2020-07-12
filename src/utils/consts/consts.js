@@ -1,5 +1,5 @@
 export const quizQuestions = [
-    "You choose your applications based on the user experience",
+    "You choose your applications based on aesthetics",
     "You need at least two monitors to be able to do work",
     "You're the first one when there's new gadgets",
     "You own a mechanical keyboard",
@@ -8,7 +8,7 @@ export const quizQuestions = [
     "You go on reddit a lot",
     "r/cscareerquestions",
     "You really enjoy customising everything",
-    "Have you tried turning it off and then turning it back on?",
+    "Have you tried turning it off and on again?",
     "Hang on, let me hate on things that I do not use",
     "You get onto the latest apps pretty quickly",
     "It doesn't take you long to learn how to use new tech",

@@ -29,14 +29,14 @@ class QuizPage extends Component {
         const questionList = quizQuestions.map((question) => {
             return (
                 <Row>
-                    <Col size={1.5}/>
+                    <Col size={1.5} collapse="xs"/>
                     <Col size={2}>
                         <QuizCard
                             text           = {question}
                             incrementCount = {this.incrementCounter}
                             decrementCount = {this.decrementCounter}/>
                     </Col>
-                    <Col size={1.5}/>
+                    <Col size={1.5} collapse="xs"/>
                 </Row>
             )
         })
@@ -44,15 +44,25 @@ class QuizPage extends Component {
         return (
             <Grid>
                 <Row>
-                    <PageHeader>
-                        How techy are you?
-                    </PageHeader>
+                    <Col size={1.5}/>
+                    <Col size={2}>
+                        <PageHeader>
+                            How techy are you?
+                        </PageHeader>
+                    </Col>
+                    <Col size={1.5}/>
                 </Row>
+
                 {questionList}
+
                 <Row>
-                    <SubmitButton>
-                       Submit
-                   </SubmitButton>
+                    <Col size={1.5}/>
+                    <Col size={2}>
+                        <SubmitButton>
+                        Submit
+                        </SubmitButton>
+                    </Col>
+                    <Col size={1.5}/>
                 </Row>
             </Grid>
         )

@@ -5,9 +5,6 @@ export const IntroCard = styled.div`
   margin-top      : 300px;
   height          : 500px;
   width           : 600px;
-  top             : 300px;
-  left            : 300px;
-  right           : 300px;
   background-color: #ffffff;
   align-items     : center;
   justify-content : center;
@@ -18,6 +15,21 @@ export const IntroCard = styled.div`
   transform : translateX(
     ${({ state }) => (state === "entering" || state === "entered" ? 1800 : 0)}px
   );
+
+  @media only screen and (max-width: 600px) {
+    height: 400px;
+    width : 300px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    margin-top: 240px;
+    height    : 300px
+  }
+
+  }
+
+
+  
 `;
 
 export const QuizLabel = styled.div`
@@ -52,6 +64,12 @@ export const QuizLabel = styled.div`
         color     : #ffffff;
       }
     `}
+
+    @media only screen and (max-width: 600px) {
+      width     : 300px;
+      font-size : 10px;
+      text-align: left;
+    }
 `;
 
 export const PageHeader = styled.h1`
@@ -61,4 +79,9 @@ export const PageHeader = styled.h1`
   letter-spacing: -0.025em;
   line-height   : 1.25;
   margin-left   : -0.0625em;
+
+  @media only screen and (max-width: 600px) {
+    font-size     : 2.5em;
+    letter-spacing: -0.025em;
+  }
 `;

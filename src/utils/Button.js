@@ -36,4 +36,10 @@ export const StartButton = styled.button`
     -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
     transform        : translateX(-9%) translateY(-25%) rotate(45deg);
   }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 10px;
+    top      : 90px;
+    right    : 80px;
+  }
 `;
