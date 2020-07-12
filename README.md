@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This was a quiz made for @Monash Association of Coding to see how tech-inclined you are.
+
+FUTURE ADDITIONS:
+- React Routers
+
 ## Available Scripts
 
 In the project directory, you can run:

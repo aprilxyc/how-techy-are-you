@@ -10,7 +10,6 @@ const CheckboxContainer = styled.div`
     margin-right : 20px;
     margin-bottom: 20px;
     float        : right;
-
 `;
 
 const TickIcon = styled.img`
