@@ -8,7 +8,7 @@ import { Transition } from "react-transition-group";
 import styled from "styled-components";
 import { IntroCard } from "../../utils/Cards";
 import { StartButton } from "../../utils/Button";
-import { Grid, Row } from "../../utils/FlexComponents";
+import { Grid, Row, Col } from "../../utils/FlexComponents";
 import "./index.css";
 
 const StyledWelcome = styled.h1`
@@ -51,26 +51,28 @@ class Introduction extends Component {
     return (
       <Grid>
         <Row>
-          <Transition in={this.props.animation} timeout={500}>
-            {(state) => (
-              <IntroCard state={state}>
-                <div>
-                  <StyledWelcome>
-                    HOW TECHY ARE YOU?
-                  </StyledWelcome>
-                  <StyledParagraph>
+         <Col />
+          <Col size={2}>
+            <Transition in={this.props.animation} timeout={500}>
+              {(state) => (
+                <IntroCard state={state}>
+                  <div>
+                    <StyledWelcome>HOW TECHY ARE YOU?</StyledWelcome>
+                    <StyledParagraph>
                       There are 30 questions. Answer them all.
                     </StyledParagraph>
-                </div>
-                <div>
-                  <StartButton onClick={this.props.handleClick}>
-                    Start <span></span>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                  </StartButton>
-                </div>
-              </IntroCard>
-            )}
-          </Transition>
+                  </div>
+                  <div>
+                    <StartButton onClick={this.props.handleClick}>
+                      Start <span></span>
+                      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </StartButton>
+                  </div>
+                </IntroCard>
+              )}
+            </Transition>
+          </Col>
+          <Col />
         </Row>
       </Grid>
     );

@@ -29,12 +29,14 @@ class QuizPage extends Component {
         const questionList = quizQuestions.map((question) => {
             return (
                 <Row>
-                    <Col size={12}>
+                    <Col size={1.5}/>
+                    <Col size={2}>
                         <QuizCard
                             text           = {question}
                             incrementCount = {this.incrementCounter}
                             decrementCount = {this.decrementCounter}/>
                     </Col>
+                    <Col size={1.5}/>
                 </Row>
             )
         })

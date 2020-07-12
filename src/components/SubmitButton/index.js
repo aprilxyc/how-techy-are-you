@@ -23,7 +23,7 @@ class SubmitButton extends Component {
     };
   }
 
-    toggleModalState = e => {
+    toggleModalState = (event) => {
       this.setState({
         isModalOpen: !this.state.isModalOpen
       });
