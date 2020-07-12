@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 
-// components
-import ResultPage from '../ResultPage/index';
+// styled components
+import styled from 'styled-components';
 
 export const Button = styled.button`
   top          : 60%;
@@ -19,7 +18,6 @@ class SubmitButton extends Component {
   constructor(props) {
     super()
   }
-  
     render() {
         return (
           <div>
