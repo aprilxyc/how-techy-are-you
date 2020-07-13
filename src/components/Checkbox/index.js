@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 // icon
 import circleCheck from '../../icons/check-circle-solid.svg';
+import circleTick from '../../icons/tick.svg';
 
 const CheckboxContainer = styled.div`
     display      : inline-block;
@@ -50,7 +51,7 @@ const Checkbox = ({ className, checked, ...props }) => (
     <CheckboxContainer>
             <HiddenCheckbox checked={checked} {...props}/>
                 <StyledCheckbox checked={checked} {...props}>
-                    <TickIcon src={circleCheck} />
+                    <TickIcon src={circleTick} />
                 </StyledCheckbox>
     </CheckboxContainer>
 )
