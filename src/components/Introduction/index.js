@@ -58,8 +58,10 @@ const IntroCard = styled.div`
   );
 
   @media only screen and (max-width: 600px) {
-    height: 400px;
-    width : 300px;
+    height       : 400px;
+    width        : 300px;
+    margin-top   : 150px;
+    margin-bottom: 150px;
   }
 
   @media only screen and (min-width: 992px) {
