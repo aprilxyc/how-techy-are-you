@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 // icon
-import circleCheck from '../../icons/check-circle-solid.svg';
 import circleTick from '../../icons/tick.svg';
 
 const CheckboxContainer = styled.div`
